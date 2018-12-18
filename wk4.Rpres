@@ -1,0 +1,47 @@
+Shiny Application and Reproducible Pitch
+========================================================
+author: Am
+date: December 2018
+autosize: true
+
+Introduction
+========================================================
+
+This Project has two parts. 
+
+First, we need to create a Shiny application and deploy it on Rstudio's servers. 
+
+Second, we should use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about the application. This presentation adresses the second part of the course project.
+
+
+Calculate Your BMI
+========================================================
+This app helps you calculate your BMI based on your wight and height.
+
+BMI can be used to indicate if you are overweight, obese, underweight or normal. A healthy BMI score is between 20 and 25.
+
+The application allows the user to provide input of weight(in pounds) and height(in inches). Output in the form of BMI with incation of underweight, normal or obese is displayed.
+
+The application allows the user to provide input of weight(in pounds) and height(in inches). Output in the form of BMI with incation of underweight, normal or obese is displayed.
+Required URL
+
+Embedded Code
+========================================================
+```{r}
+BMI<-function(weight,height) {(weight*0.45)/((height*0.025)^2)}
+diagnostic_f<-function(weight,height){
+  BMI_value<-(weight*0.45)/((height*0.025)^2)
+  ifelse(BMI_value<18.5,"underweight",
+  ifelse(BMI_value<25,"normal weight",
+  ifelse(BMI_value<30,"overweight","obesity")))
+}
+```
+
+Links
+========================================================
+The app developed for the first part of the assignment is avalilable at: https://ambika03maruthi.shinyapps.io/BMI_Calculator/
+
+
+Thanks For Reviewing!
+========================================================
+
